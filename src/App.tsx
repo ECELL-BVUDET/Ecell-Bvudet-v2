@@ -7,7 +7,7 @@ import { Route } from "react-router-dom";
 import Menu from "./components/Menu/Menu";
 import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
-import Join from "./pages/Join/Join";
+import Register from "./pages/Register/Register";
 import Founders from "./pages/Founders/Founders";
 import Archive from "./pages/Archive/Archive";
 import Credits from "./pages/Credits/Credits";
@@ -36,7 +36,7 @@ function App() {
 		{ path: "/team/archive", name: "Past Teams", Component: TeamArchive },
 		{ path: "/team/archive/:slug", name: "Past Team Year", Component: TeamYear },
 		{ path: "/contact", name: "Contact", Component: Contact },
-		{ path: "/join", name: "Join Us", Component: Join },
+		{ path: "/register", name: "Register", Component: Register },
 		{ path: "/entrepreneurs", name: "Founders", Component: Founders },
 		{ path: "/past-events", name: "Archive", Component: Archive },
 		{ path: "/credits", name: "Credits", Component: Credits },

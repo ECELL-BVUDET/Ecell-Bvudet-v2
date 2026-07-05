@@ -261,7 +261,7 @@ const Founders: React.FC<PageProps> = ({
 				<div className={S.cta} data-scroll-section>
 					<div className={S.animateOpacity} data-scroll>
 						<h2 className={S.ctaTitle}>YOUR STORY STARTS AT E-CELL</h2>
-						<Link to="/join" className={S.ctaButton}>
+						<Link to="/register" className={S.ctaButton}>
 							<Button use="credits" text="JOIN US NOW" />
 						</Link>
 					</div>

@@ -381,14 +381,14 @@ const Menu: React.FC<MenuProps> = ({
 				</p>
 			</Link>
 
-			<Link to="/join">
+			<Link to="/register">
 				<p
 					data-filter="3"
 					data-splitting=""
 					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
-					Join Us <Icon className={S.icon} />
+					Register <Icon className={S.icon} />
 				</p>
 			</Link>
 			<Link to="/entrepreneurs">

@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import splitting from "splitting";
-import S from "./Join.module.scss";
+import S from "./Register.module.scss";
 import { PageProps } from "../page.types";
 import Nav from "../../components/Nav/Nav";
 import LocomotiveScroll from "locomotive-scroll";
@@ -181,7 +181,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange, placehold
 	);
 };
 
-const Join: React.FC<PageProps> = ({
+const Register: React.FC<PageProps> = ({
 	appLoaded,
 	preloaded,
 	navOnClick,
@@ -1118,4 +1118,4 @@ const Join: React.FC<PageProps> = ({
 	);
 };
 
-export default Join;
+export default Register;
