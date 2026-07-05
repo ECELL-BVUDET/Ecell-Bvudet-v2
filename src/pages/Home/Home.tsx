@@ -54,7 +54,7 @@ const Home: React.FC<PageProps> = ({
 				})
 			);
 		} else if (preloaded && scroll) {
-			Promise.all([preloadImages(), document.fonts.ready]).then(() => {
+			Promise.all([preloadImages(), (document as any).fonts.ready]).then(() => {
 				scroll.update();
 			});
 			scroll.stop();
