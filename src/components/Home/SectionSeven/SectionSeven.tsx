@@ -50,17 +50,19 @@ const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 		<section data-scroll-section>
 			<div className={S.section}>
 				<div className={S.marqueeSection}>
-					<Marquee
-						pauseOnHover
-						gradient={false}
-						className={S.marquee}
-						speed={windowWidth > 1024 ? 15 : 80}
-					>
-						<p className={S.marqueeText}>Our Mentors</p>
-						<p className={S.marqueeText}>Our Mentors</p>
-						<p className={S.marqueeText}>Our Mentors</p>
-						<p className={S.marqueeText}>Our Mentors</p>
-					</Marquee>
+					<div className={S.marqueeWrapper}>
+						<Marquee
+							pauseOnHover
+							gradient={false}
+							className={S.marquee}
+							speed={windowWidth > 1024 ? 15 : 80}
+						>
+							<p className={S.marqueeText}>Our Mentors</p>
+							<p className={S.marqueeText}>Our Mentors</p>
+							<p className={S.marqueeText}>Our Mentors</p>
+							<p className={S.marqueeText}>Our Mentors</p>
+						</Marquee>
+					</div>
 				</div>
 				<div className={S.main}>
 					<div className={S.header}>

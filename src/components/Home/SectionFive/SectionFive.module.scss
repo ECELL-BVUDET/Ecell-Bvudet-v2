@@ -16,19 +16,26 @@
 	}
 }
 
-.marquee {
-	cursor: pointer;
-	border-top: 1px solid #414141;
-	border-bottom: 1px solid #414141;
-
+.marqueeWrapper {
 	@include media(">mobile") {
 		position: absolute !important;
-		bottom: 0;
+		top: 100%;
 		left: 8.78vh;
 		width: 100vh !important;
 		height: 14.578vh !important;
 		transform: rotate(-90deg);
-		transform-origin: left bottom;
+		transform-origin: top left;
+	}
+}
+
+.marquee {
+	cursor: pointer;
+	border-top: 1px solid #414141;
+	border-bottom: 1px solid #414141;
+	
+	@include media(">mobile") {
+		width: 100%;
+		height: 100%;
 	}
 }
 

@@ -29,17 +29,19 @@ const SectionFive: React.FC<SectionFiveProps> = ({ windowWidth }) => {
 	return (
 		<section id="section-five" data-scroll-section>
 			<div id="target-element" className={S.section}>
-				<Marquee
-					pauseOnHover
-					gradient={false}
-					className={S.marquee}
-					speed={windowWidth > 1024 ? 15 : 80}
-				>
-					<p className={S.marqueeText}>Events</p>
-					<p className={S.marqueeText}>Events</p>
-					<p className={S.marqueeText}>Events</p>
-					<p className={S.marqueeText}>Events</p>
-				</Marquee>
+				<div className={S.marqueeWrapper}>
+					<Marquee
+						pauseOnHover
+						gradient={false}
+						className={S.marquee}
+						speed={windowWidth > 1024 ? 15 : 80}
+					>
+						<p className={S.marqueeText}>Events</p>
+						<p className={S.marqueeText}>Events</p>
+						<p className={S.marqueeText}>Events</p>
+						<p className={S.marqueeText}>Events</p>
+					</Marquee>
+				</div>
 				<div className={S.main}>
 					<h2
 						data-scroll
