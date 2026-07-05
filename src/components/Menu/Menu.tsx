@@ -360,72 +360,65 @@ const Menu: React.FC<MenuProps> = ({
 				className={S.close}
 				onClick={() => setOpen(false)}
 			/>
-			<Link to="/">
+			<Link to="/" onClick={onClick}>
 				<p
 					data-filter="0"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Home <Icon className={S.icon} />
 				</p>
 			</Link>
-			<Link to="/team">
+			<Link to="/team" onClick={onClick}>
 				<p
 					data-filter="1"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Team <Icon className={S.icon} />
 				</p>
 			</Link>
 
-			<Link to="/register">
+			<Link to="/register" onClick={onClick}>
 				<p
 					data-filter="3"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Register <Icon className={S.icon} />
 				</p>
 			</Link>
-			<Link to="/entrepreneurs">
+			<Link to="/entrepreneurs" onClick={onClick}>
 				<p
 					data-filter="4"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Founders <Icon className={S.icon} />
 				</p>
 			</Link>
-			<Link to="/past-events">
+			<Link to="/past-events" onClick={onClick}>
 				<p
 					data-filter="5"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Archive <Icon className={S.icon} />
 				</p>
 			</Link>
-			<Link to="/contact">
+			<Link to="/contact" onClick={onClick}>
 				<p
 					data-filter="2"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Contact <Icon className={S.icon} />
 				</p>
 			</Link>
-			<Link to="/credits">
+			<Link to="/credits" onClick={onClick}>
 				<p
 					data-filter="7"
 					data-splitting=""
-					onClick={onClick}
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Dev Credits <Icon className={S.icon} />
