@@ -23,12 +23,12 @@
 
 	@include media(">mobile") {
 		position: absolute !important;
-		top: 100%;
+		bottom: 0;
 		left: 8.78vh;
 		width: 100vh !important;
 		height: 14.578vh !important;
 		transform: rotate(-90deg);
-		transform-origin: top left;
+		transform-origin: left bottom;
 	}
 }
 
