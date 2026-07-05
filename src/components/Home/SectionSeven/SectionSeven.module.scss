@@ -18,6 +18,7 @@
 .marqueeSection {
 	@include media(">mobile") {
 		width: 18.85%;
+		position: relative;
 	}
 }
 
@@ -28,10 +29,12 @@
 
 	@include media(">mobile") {
 		position: absolute !important;
+		top: 100%;
+		left: 50%;
+		width: 100vh !important;
 		height: 14.638vh !important;
-		transform: rotate(270deg);
-		transform-origin: 71vh 427%;
-		margin: 8.55vh 0;
+		transform: rotate(-90deg) translateY(-50%);
+		transform-origin: top left;
 	}
 }
 

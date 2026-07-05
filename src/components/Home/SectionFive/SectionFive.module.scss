@@ -23,10 +23,12 @@
 
 	@include media(">mobile") {
 		position: absolute !important;
+		top: 100%;
+		left: 8.78vh;
+		width: 100vh !important;
 		height: 14.578vh !important;
-		transform: rotate(270deg);
-		transform-origin: 71vh 427%;
-		margin: 8.78vh 0;
+		transform: rotate(-90deg);
+		transform-origin: top left;
 	}
 }
 
