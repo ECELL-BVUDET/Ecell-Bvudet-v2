@@ -3,7 +3,7 @@ import S from "./App.module.scss";
 import splitting from "splitting";
 import Home from "./pages/Home/Home";
 import "splitting/dist/splitting.css";
-import { Route } from "react-router-dom";
+import { Route, matchPath } from "react-router-dom";
 import Menu from "./components/Menu/Menu";
 import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
@@ -43,7 +43,6 @@ function App() {
 		{ path: "/credits", name: "Credits", Component: Credits },
 		{ path: "/past-events/:slug", name: "Event Detail", Component: PastEventDetail },
 		{ path: "/past-events/:slug/gallery", name: "Event Gallery", Component: EventGallery },
-		{ path: "*", name: "Not Found", Component: NotFound },
 	];
 
 	const onEnter = () => {
@@ -122,7 +121,7 @@ function App() {
 				windowWidth={windowWidth}
 			/>
 			<Banner />
-			{routes.map(({ name, path, Component }) => (
+		{routes.map(({ name, path, Component }) => (
 				<Route key={path} exact path={path}>
 					{({ match }) => (
 						<CSSTransition
@@ -145,6 +144,32 @@ function App() {
 					)}
 				</Route>
 			))}
+			<Route path="*">
+				{({ location }) => {
+					const is404 = !routes.some((route) =>
+						matchPath(location.pathname, { path: route.path, exact: true })
+					);
+					return (
+						<CSSTransition
+							unmountOnExit
+							timeout={2500}
+							onExit={onExit}
+							in={is404}
+							onEntering={onEnter}
+						>
+							<div className={S.page} data-name="Not Found">
+								<NotFound
+									appLoaded={appLoaded}
+									preloaded={preloaded}
+									windowWidth={windowWidth}
+									setAppLoaded={setAppLoaded}
+									navOnClick={() => setOpen(!open)}
+								/>
+							</div>
+						</CSSTransition>
+					);
+				}}
+			</Route>
 		</main>
 	);
 }
