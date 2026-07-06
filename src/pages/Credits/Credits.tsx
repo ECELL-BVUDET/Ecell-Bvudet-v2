@@ -54,7 +54,7 @@ const Credits: React.FC<PageProps> = ({
 		},
 		{
 			id: "deepanshu-ghosalkar",
-			name: "Deepanshu Jayesh Ghosalkar",
+			name: "Deepanshu Ghosalkar",
 			role: "DEVELOPER",
 			bio: "Worked on the frontend development of the E-Cell website and ensured optimal performance.",
 			github: "https://github.com/SPY-DEEP-06",

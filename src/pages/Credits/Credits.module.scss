@@ -146,10 +146,6 @@
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.hoverTextWrap:hover .hoverBg {
-	transform: scale(1);
-}
-
 .hoverTextContent {
 	position: relative;
 	z-index: 1;
@@ -158,8 +154,14 @@
 	font-weight: 500;
 }
 
-.hoverTextWrap:hover .hoverTextContent {
-	color: #000;
+@media (hover: hover) {
+	.hoverTextWrap:hover .hoverBg {
+		transform: scale(1);
+	}
+
+	.hoverTextWrap:hover .hoverTextContent {
+		color: #000;
+	}
 }
 
 @include media("<=mobile") {
