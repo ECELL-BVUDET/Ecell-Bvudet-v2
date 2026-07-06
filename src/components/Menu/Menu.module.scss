@@ -16,9 +16,11 @@
 		top: 0;
 		width: 94vw;
 		height: 100vh;
-		gap: 1.5vh;
-		padding: 8vh 0 8vh 12.56vh;
+		gap: 2vh 8vw;
+		padding: 12vh 0 12vh 12.56vh;
 		border-left: 1px solid #000;
+		grid-template-columns: repeat(2, max-content);
+		align-content: center;
 	}
 	@include media("<=mobile") {
 		left: 0;
@@ -42,6 +44,7 @@
 		padding-right: 2vh;
 		text-stroke: 1.5px rgb(0, 0, 0);
 		-webkit-text-stroke: 1.5px rgb(0, 0, 0);
+		font-size: 7vh;
 	}
 	@include media("<=mobile") {
 		font-size: 2.5rem;

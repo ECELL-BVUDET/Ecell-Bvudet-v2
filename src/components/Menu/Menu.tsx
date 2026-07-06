@@ -21,7 +21,7 @@ const Menu: React.FC<MenuProps> = ({
 	windowWidth,
 }) => {
 	const menuRef = useRef<HTMLDivElement>(null);
-	const feDisplacementMapRefs = useRefArray<SVGFEDisplacementMapElement>(8);
+	const feDisplacementMapRefs = useRefArray<SVGFEDisplacementMapElement>(10);
 	const { ref: enterTimeline, setStateRef: setEnterTimeline } =
 		useStateRef<null | gsap.core.Timeline>(null);
 
@@ -353,6 +353,22 @@ const Menu: React.FC<MenuProps> = ({
 							ref={feDisplacementMapRefs[7]}
 						/>
 					</filter>
+					<filter id="filter-8">
+						<feTurbulence
+							result="warp"
+							numOctaves="6"
+							type="fractalNoise"
+							baseFrequency="0.2 0.025"
+						/>
+						<feDisplacementMap
+							scale="0"
+							in2="warp"
+							in="SourceGraphic"
+							xChannelSelector="R"
+							yChannelSelector="G"
+							ref={feDisplacementMapRefs[8]}
+						/>
+					</filter>
 				</defs>
 			</svg>
 			<Close
@@ -386,6 +402,24 @@ const Menu: React.FC<MenuProps> = ({
 					className={`${S.menuItem} split-text menuItem`}
 				>
 					Register <Icon className={S.icon} />
+				</p>
+			</Link>
+			<Link to="/mentor-onboarding" onClick={onClick}>
+				<p
+					data-filter="8"
+					data-splitting=""
+					className={`${S.menuItem} split-text menuItem`}
+				>
+					Mentor with Us <Icon className={S.icon} />
+				</p>
+			</Link>
+			<Link to="/#mentors" onClick={onClick}>
+				<p
+					data-filter="9"
+					data-splitting=""
+					className={`${S.menuItem} split-text menuItem`}
+				>
+					Our Mentors <Icon className={S.icon} />
 				</p>
 			</Link>
 			<Link to="/entrepreneurs" onClick={onClick}>

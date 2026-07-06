@@ -13,7 +13,16 @@ const Nav = React.forwardRef<HTMLElement, NavProps>(({ onClick }, ref) => {
 				<p>Me</p>
 				<p>Nu</p>
 			</div>
-			<Link to="/" className={S.lower} style={{ textDecoration: "none" }}>
+			<Link to="/" className={S.lower} style={{ textDecoration: "none" }} onClick={(e) => {
+				if (window.location.pathname === "/") {
+					e.preventDefault();
+					window.dispatchEvent(new Event("scrollToTop"));
+					// Clear the hash if it exists so it's a clean URL
+					if (window.location.hash) {
+						window.history.pushState("", document.title, window.location.pathname);
+					}
+				}
+			}}>
 				<img src="/E-cell Logo.svg" alt="E-Cell Logo" className={S.logo} />
 			</Link>
 			<div className={S.div} />

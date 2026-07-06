@@ -127,7 +127,7 @@ export const pastEvents: PastEvent[] = [
       { name: "Industry Mentor", role: "Product Mentor", organization: "TBA", placeholder: true }
     ],
     images: [
-      "https://res.cloudinary.com/tobijudah/image/upload/q_auto,f_auto/v1637486753/it/5_jhk3kg.png",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1783313539/dv_with_ai_YouTube_Thumbnail_q02jei.png",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1783247155/Copy_of_IMG_9032_tgdpns.heic",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/f_auto,q_auto/v1783247150/Copy_of_IMG_9036_kelgav.heic",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/f_auto,q_auto/v1783247152/Copy_of_IMG_9045_vtjbry.jpg",
@@ -159,7 +159,7 @@ export const pastEvents: PastEvent[] = [
       { name: "Guest Speaker", role: "Entrepreneur", organization: "TBA", placeholder: true }
     ],
     images: [
-      "https://res.cloudinary.com/tobijudah/image/upload/q_auto,f_auto/v1637522594/it/6_eda4xd.png",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1783313541/launchpad_insta_700_x_400_px_1_cjaeve.png",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1783247000/Copy_of_IMG-20250927-WA0360_l6ylz5.jpg",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1783247001/Copy_of_IMG-20250927-WA0345_pmmp8q.jpg",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1783247000/Copy_of_IMG-20250927-WA0366_qtunsf.jpg",

@@ -6,7 +6,7 @@
 	background-color: #fff;
 
 	@include media(">mobile") {
-		width: 105vw;
+		width: 100vw;
 		min-height: 100vh;
 	}
 	@include media("<=mobile") {

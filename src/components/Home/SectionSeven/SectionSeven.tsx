@@ -47,7 +47,7 @@ const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 	const [selectedMentor, setSelectedMentor] = useState<any>(null);
 
 	return (
-		<section data-scroll-section>
+		<section id="mentors-section" data-scroll-section>
 			<div className={S.section}>
 				<div className={S.marqueeSection}>
 					<div className={S.marqueeWrapper}>

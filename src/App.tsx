@@ -8,6 +8,7 @@ import Menu from "./components/Menu/Menu";
 import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
 import Register from "./pages/Register/Register";
+import MentorOnboarding from "./pages/MentorOnboarding/MentorOnboarding";
 import NotFound from "./pages/NotFound/NotFound";
 import Founders from "./pages/Founders/Founders";
 import Archive from "./pages/Archive/Archive";
@@ -39,6 +40,7 @@ function App() {
 		{ path: "/contact", name: "Contact", Component: Contact },
 		{ path: "/register", name: "Register", Component: Register },
 		{ path: "/entrepreneurs", name: "Founders", Component: Founders },
+		{ path: "/mentor-onboarding", name: "Mentor Onboarding", Component: MentorOnboarding },
 		{ path: "/past-events", name: "Archive", Component: Archive },
 		{ path: "/credits", name: "Credits", Component: Credits },
 		{ path: "/past-events/:slug", name: "Event Detail", Component: PastEventDetail },
