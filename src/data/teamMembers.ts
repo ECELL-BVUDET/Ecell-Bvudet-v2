@@ -77,6 +77,63 @@ export const currentTeam: TeamMember[] = [
     year: "2026",
     tenure: "2026–27"
   },
+  {
+    id: "jasn-rathore",
+    name: "Jasn Rathore",
+    role: "Technical Head",
+    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1787853970/lpfp_bct9l5.png",
+    bio: "Jasn Rathore is the Technical Head, leading E-Cell's technical initiatives, overseeing digital infrastructure, and driving innovative technology solutions for the organization.",
+    linkedin: "https://www.linkedin.com/in/jasn-rathore-884644256/",
+    instagram: "https://www.linkedin.com/in/jasn-rathore-884644256/",
+    github: "https://www.github.com/JasnRathore",
+    email: "jasn.p.rathore@gmail.com",
+    website: "https://www.jasnrathore.fun/",
+    isPlaceholder: false,
+    year: "2026",
+    tenure: "2026–27"
+  },{
+    id: "harshal-sukhdare",
+    name: "Harshal Sukhdare",
+    role: "Event Head",
+    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1781430074/harshal_fhnxar.jpg",
+    bio: "Harshal Sukhdare is an Executive in Event Management, contributing to the planning, coordination, and execution of E-Cell events while ensuring smooth operations and engaging experiences for participants.",
+    linkedin: "https://www.linkedin.com/in/harshal-sukhdare-06460434a",
+    instagram: "https://www.instagram.com/harshal_sukhdare_28",
+    github: "https://github.com/Harshalss28",
+    email: "harshalsukhdare28@gmail.com",
+    website: null,
+    isPlaceholder: false,
+    year: "2026",
+    tenure: "2026–27"
+  },{
+    id: "amanaryan-jena",
+    name: "Amanaryan Jena",
+    role: "PR & Sponsorship Head",
+    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1787855199/amanaryan.png",
+    bio: "Amanaryan Jena is the PR & Sponsorship Head, building strong external relationships, securing sponsorships, and driving strategic collaborations to support E-Cell's initiatives and events.",
+    linkedin: "https://in.linkedin.com/in/amanaryan-jena-88387731a",
+    instagram: "https://www.instagram.com/am4naryan/",
+    github: null,
+    email: "amanaryanjena1@gmail.com",
+    website: null,
+    isPlaceholder: false,
+    year: "2026",
+    tenure: "2026–27"
+  },{
+    id: "srushti-kalbhor",
+    name: "Srushti Kalbhor",
+    role: "Executive - Technical",
+    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1781430075/srusti_gu3fxx.jpg",
+    bio: "",
+    linkedin: "https://www.linkedin.com/in/srushti-kalbhor-44b8",
+    instagram: "https://www.instagram.com/_srusht.iiik_",
+    github: "https://github.com/Srushtihkalbhor-2007",
+    email: "srushtikalbhor1307@gmail.com",
+    website: null,
+    isPlaceholder: false,
+    year: "2026",
+    tenure: "2026–27"
+  },
 ];
 
 export const pastTeams: PastTeamYear[] = [
