@@ -36,7 +36,7 @@ export const currentTeam: TeamMember[] = [
     id: "piyush-jaiswal",
     name: "Piyush Jaiswal",
     role: "President",
-    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1781430075/piyush_qkqsiq.jpg",
+    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1787896547/IMG_6715_-_Piyush_Jaiswal_iayq15.jpg",
     bio: "Piyush Jaiswal leads E-Cell BVUDET as President, focusing on building a robust startup ecosystem and fostering student entrepreneurship.",
     linkedin: "https://www.linkedin.com/in/piyush-jaiswal-7a5850272",
     instagram: "https://www.instagram.com/probablyalunatic",
