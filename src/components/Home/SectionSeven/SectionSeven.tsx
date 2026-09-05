@@ -7,44 +7,81 @@ type SectionSevenProps = {
 	windowWidth: number;
 };
 
-const mentors = [
+type Mentor = {
+	name: string;
+	email: string;
+	phone: string;
+	linkedin: string;
+	designation: string;
+	organization: string;
+	location: string;
+	experience: string;
+	industry: string;
+	expertise: string;
+	availability: string;
+	timeCommitment: string;
+	maxStartups: string;
+	startupStage: string;
+	description: string;
+};
+
+const mentors: Mentor[] = [
 	{
-		name: "Dr. John Doe",
-		email: "john.doe@example.com",
-		phone: "+91 9876543210",
-		days: "Mon, Wed, Fri",
-		grants: "₹5,000,000",
-		description: "Expert in Fintech and scaling startups from 0 to 1.",
+		name: "KANHAYYA GUPTA",
+		email: "kanhacet@gmail.com",
+		phone: "9326650454",
+		linkedin: "https://www.linkedin.com/in/kanhayya-gupta/",
+		designation: "AI Engineer",
+		organization: "Pixels Creative Technologies",
+		location: "Mumbai",
+		experience: "1 year",
+		industry: "AI / ML, Healthcare",
+		expertise: "Tech / Product Development, Operations",
+		availability: "Both",
+		timeCommitment: "4 hours",
+		maxStartups: "More than 3",
+		startupStage: "MVP",
+		description: "AI engineer and startup founder building SaaS products and AI automation tools. 4x National Hackathon Winner with experience mentoring at five national hackathons.",
 	},
 	{
-		name: "Jane Smith",
-		email: "jane.smith@example.com",
-		phone: "+91 9123456789",
-		days: "Tue, Thu",
-		grants: "₹2,500,000",
-		description: "Marketing guru with 15+ years experience in global brands.",
+		name: "SOMANATH DIKSANGI",
+		email: "somanathdiksangi@gmail.com",
+		phone: "8433688163",
+		linkedin: "https://www.linkedin.com/in/somanath-diksangi-63868627a/",
+		designation: "AI Engineer",
+		organization: "flytbase",
+		location: "Pune",
+		experience: "2 years",
+		industry: "SaaS, AI / ML",
+		expertise: "Product, Tech / Product Development, Marketing",
+		availability: "Both",
+		timeCommitment: "4 hours",
+		maxStartups: "More than 3",
+		startupStage: "Early Revenue",
+		description: "AI engineer and startup builder with hands-on experience in product development, launching, validating ideas, and solving real-world problems.",
 	},
 	{
-		name: "Rajiv Kumar",
-		email: "rajiv.kumar@example.com",
-		phone: "+91 9988776655",
-		days: "Sat, Sun",
-		grants: "₹10,000,000",
-		description: "Angel investor and tech pioneer specializing in AI/ML.",
-	},
-	{
-		name: "Dr. Emily Chen",
-		email: "emily.chen@example.com",
-		phone: "+91 9777555333",
-		days: "Wed, Fri",
-		grants: "₹7,500,000",
-		description: "Product strategist focusing on clean energy and sustainability.",
+		name: "ABHIJAY SINGH",
+		email: "abhijaysingh16@gmail.com",
+		phone: "9767010283",
+		linkedin: "https://www.linkedin.com/in/abhijay-singh-ab865226a",
+		designation: "CEO & Founder",
+		organization: "Drone Veda Technology OPC Pvt Ltd",
+		location: "Navi Mumbai",
+		experience: "2 years",
+		industry: "Manufacturing, D2C, Other",
+		expertise: "Fundraising, Legal / Compliance, Tech / Product Development, Product, Branding, GTM Strategy, Operations, HR",
+		availability: "Both",
+		timeCommitment: "4 hours",
+		maxStartups: "2–3",
+		startupStage: "Idea Stage",
+		description: "Founder with experience across drone technology, fundraising, product development, branding, operations, and go-to-market strategy.",
 	}
 ];
 
 const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 	const [activeRow, setActiveRow] = useState<number | null>(null);
-	const [selectedMentor, setSelectedMentor] = useState<any>(null);
+	const [selectedMentor, setSelectedMentor] = useState<Mentor | null>(null);
 
 	return (
 		<section id="mentors-section" data-scroll-section>
@@ -68,7 +105,7 @@ const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 					<div className={S.header}>
 						<p className={S.largeText}>Meet Our Mentors</p>
 						<p className={S.smallText}>
-							Connect with experienced industry leaders who are ready to guide you, offer grants, and help you build the next big thing.
+							Connect with experienced founders and industry professionals who are ready to guide student entrepreneurs through every stage of building a startup.
 						</p>
 					</div>
 
@@ -84,9 +121,9 @@ const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 								<div className={S.rowHeader}>
 									<p className={S.eventName}>{mentor.name}</p>
 									<p className={S.eventMeta}>
-										AVAILABLE: {mentor.days}
+										{mentor.designation}
 									</p>
-									<p className={S.eventLocation}>GRANTS: {mentor.grants}</p>
+									<p className={S.eventLocation}>{mentor.organization}</p>
 								</div>
 								<div
 									className={`${S.rowBody} ${
@@ -106,6 +143,7 @@ const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 						<div className={S.modalContent} onClick={(e) => e.stopPropagation()}>
 							<button className={S.closeButton} onClick={() => setSelectedMentor(null)}>&times;</button>
 							<h3 className={S.modalName}>{selectedMentor.name}</h3>
+							<p className={S.eventMeta}>{selectedMentor.designation} · {selectedMentor.organization}</p>
 							<p className={S.modalDesc}>{selectedMentor.description}</p>
 							
 							<div className={S.modalDetails}>
@@ -118,12 +156,28 @@ const SectionSeven: React.FC<SectionSevenProps> = ({ windowWidth }) => {
 									<span className={S.detailValue}>{selectedMentor.phone}</span>
 								</div>
 								<div className={S.detailRow}>
-									<span className={S.detailLabel}>Available Days:</span>
-									<span className={S.detailValue}>{selectedMentor.days}</span>
+									<span className={S.detailLabel}>LinkedIn:</span>
+									<a className={S.detailValue} href={selectedMentor.linkedin} target="_blank" rel="noreferrer">View profile</a>
 								</div>
 								<div className={S.detailRow}>
-									<span className={S.detailLabel}>Grants:</span>
-									<span className={S.detailValue}>{selectedMentor.grants}</span>
+									<span className={S.detailLabel}>Location / Experience:</span>
+									<span className={S.detailValue}>{selectedMentor.location} · {selectedMentor.experience}</span>
+								</div>
+								<div className={S.detailRow}>
+									<span className={S.detailLabel}>Industry:</span>
+									<span className={S.detailValue}>{selectedMentor.industry}</span>
+								</div>
+								<div className={S.detailRow}>
+									<span className={S.detailLabel}>Expertise:</span>
+									<span className={S.detailValue}>{selectedMentor.expertise}</span>
+								</div>
+								<div className={S.detailRow}>
+									<span className={S.detailLabel}>Availability:</span>
+									<span className={S.detailValue}>{selectedMentor.availability} · {selectedMentor.timeCommitment}</span>
+								</div>
+								<div className={S.detailRow}>
+									<span className={S.detailLabel}>Mentorship:</span>
+									<span className={S.detailValue}>{selectedMentor.maxStartups} startups · {selectedMentor.startupStage}</span>
 								</div>
 							</div>
 						</div>
