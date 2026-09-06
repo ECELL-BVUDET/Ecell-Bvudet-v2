@@ -25,6 +25,25 @@ const industryOptions = [
 	"Social Enterprise", "AgriTech", "CleanTech", "Food and Beverage", "Other"
 ];
 
+const isValidLinkedInUrl = (url: string): boolean => {
+	const trimmed = url.trim();
+	if (!trimmed) return false;
+	const pattern = /^(https?:\/\/)?((([\w-]+\.)*linkedin\.com\/)?(in|pub|company)\/|(([\w-]+\.)*linkedin\.com\/))[\w\-\.%]+\/?([?#][^\s]*)?$/i;
+	return pattern.test(trimmed);
+};
+
+const normalizeLinkedInUrl = (url: string): string => {
+	let trimmed = url.trim();
+	if (!trimmed) return "";
+	if (/^in\//i.test(trimmed)) {
+		return `https://www.linkedin.com/${trimmed}`;
+	}
+	if (!/^https?:\/\//i.test(trimmed)) {
+		return `https://${trimmed}`;
+	}
+	return trimmed;
+};
+
 const CheckIcon = () => <FaCheck style={{ width: "1.5vh", height: "1.5vh" }} />;
 
 const UploadIcon = () => <FaUpload style={{ width: "4vh", height: "4vh" }} />;
@@ -465,8 +484,8 @@ const Register: React.FC<PageProps> = ({
 
 		if (!formData.leaderLinkedin.trim()) {
 			step0Errors.leaderLinkedin = "LinkedIn URL is required";
-		} else if (!/^https?:\/\/(www\.)?linkedin\.com\/in\/[\w-]+\/?$/.test(formData.leaderLinkedin.trim())) {
-			step0Errors.leaderLinkedin = "Must match linkedin.com/in/profile pattern";
+		} else if (!isValidLinkedInUrl(formData.leaderLinkedin)) {
+			step0Errors.leaderLinkedin = "Please enter a valid LinkedIn profile URL (e.g. linkedin.com/in/yourprofile)";
 		}
 
 		if (!formData.leaderRole.trim()) step0Errors.leaderRole = "Role in startup is required";
@@ -506,8 +525,8 @@ const Register: React.FC<PageProps> = ({
 				
 				if (!member.linkedin.trim()) {
 					mErrors.linkedin = "LinkedIn is required";
-				} else if (!/^https?:\/\/(www\.)?linkedin\.com\/in\/[\w-]+\/?$/.test(member.linkedin.trim())) {
-					mErrors.linkedin = "Must match linkedin.com/in/profile pattern";
+				} else if (!isValidLinkedInUrl(member.linkedin)) {
+					mErrors.linkedin = "Please enter a valid LinkedIn profile URL (e.g. linkedin.com/in/profile)";
 				}
 
 				if (Object.keys(mErrors).length > 0) {
@@ -531,6 +550,10 @@ const Register: React.FC<PageProps> = ({
 				return;
 			}
 			setErrors({});
+			setFormData(prev => ({
+				...prev,
+				leaderLinkedin: normalizeLinkedInUrl(prev.leaderLinkedin)
+			}));
 			setStep(1);
 			scrollToForm();
 		} else if (step === 1) {
@@ -596,7 +619,15 @@ const Register: React.FC<PageProps> = ({
 		setSubmitError("");
 
 		try {
-			await submitApplication(formData, teamMembers, pitchDeck);
+			const normalizedFormData: FormData = {
+				...formData,
+				leaderLinkedin: normalizeLinkedInUrl(formData.leaderLinkedin)
+			};
+			const normalizedTeamMembers: TeamMember[] = teamMembers.map((member) => ({
+				...member,
+				linkedin: member.linkedin.trim() ? normalizeLinkedInUrl(member.linkedin) : ""
+			}));
+			await submitApplication(normalizedFormData, normalizedTeamMembers, pitchDeck);
 			setIsSuccess(true);
 			// Clear local storage upon successful submission
 			localStorage.removeItem('joinFormData');
@@ -812,7 +843,8 @@ const Register: React.FC<PageProps> = ({
 										<div className={S.inputGroup}>
 											<label className={S.inputLabel}>LinkedIn URL</label>
 											<input
-												type="url"
+												type="text"
+												inputMode="url"
 												placeholder="linkedin.com/in/yourprofile"
 												className={S.inputField}
 												value={formData.leaderLinkedin}
@@ -999,7 +1031,8 @@ const Register: React.FC<PageProps> = ({
 													<div className={S.inputGroup}>
 														<label className={S.inputLabel}>LinkedIn URL</label>
 														<input
-															type="url"
+															type="text"
+															inputMode="url"
 															placeholder="linkedin.com/in/profile"
 															className={S.inputField}
 															value={member.linkedin}
