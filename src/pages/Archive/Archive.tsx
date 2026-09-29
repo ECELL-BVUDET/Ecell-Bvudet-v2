@@ -8,7 +8,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Button from "../../components/Button/Button";
 import IntroAnimation from "../../animations/intro";
 import React, { useEffect, useRef, useState } from "react";
-import { pastEvents } from "../../data/pastEvents";
+import { pastEventsChronological } from "../../data/pastEvents";
 const Archive: React.FC<PageProps> = ({
 	appLoaded,
 	preloaded,
@@ -96,7 +96,7 @@ const Archive: React.FC<PageProps> = ({
 				</div>
 
 				<div className={S.list} data-scroll-section>
-					{pastEvents.map((event, idx) => (
+					{pastEventsChronological.map((event, idx) => (
 						<Link
 							key={idx}
 							to={`/past-events/${event.slug}`}
@@ -125,7 +125,7 @@ const Archive: React.FC<PageProps> = ({
 
 				<div className={S.stats} data-scroll-section>
 					<div className={`${S.statItem} ${S.animateOpacity}`} data-scroll>
-						<p className={S.statNumber}>5+</p>
+						<p className={S.statNumber}>6+</p>
 						<p className={S.statLabel}>EVENTS RUN</p>
 					</div>
 					<div className={`${S.statItem} ${S.animateOpacity}`} data-scroll>
@@ -133,7 +133,7 @@ const Archive: React.FC<PageProps> = ({
 						<p className={S.statLabel}>PARTICIPANTS</p>
 					</div>
 					<div className={`${S.statItem} ${S.animateOpacity}`} data-scroll>
-						<p className={S.statNumber}>2</p>
+						<p className={S.statNumber}>3</p>
 						<p className={S.statLabel}>YEARS RUNNING</p>
 					</div>
 					<div className={`${S.statItem} ${S.animateOpacity}`} data-scroll>

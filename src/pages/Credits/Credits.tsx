@@ -42,6 +42,17 @@ const Credits: React.FC<PageProps> = ({
 			instagram: "https://www.instagram.com/siddharthsingh2926",
 			email: "sidddharthsingh707@gmail.com"
 		},
+
+		{
+			id: "jasn-rathore",
+			name: "Jasn Rathore",
+			role: "DEVELOPER",
+			bio: "Maintained the site during the 2026-2027 Tenure.",
+			github: "https://github.com/jasnrathore",
+			linkedin: "https://www.linkedin.com/in/jasn-rathore-884644256",
+			website: "https://www.jasnrathore.fun",
+			email: "jasn.p.rathore@gmail.com"
+		},
 		{
 			id: "shivam-kumar",
 			name: "Shivam Kumar",

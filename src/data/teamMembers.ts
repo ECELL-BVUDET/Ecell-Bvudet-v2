@@ -135,7 +135,7 @@ export const currentTeam: TeamMember[] = [
      tenure: "2026–27"
   },{
     id: "arham-khan",
-    name: "Araham Khan",
+    name: "Arham Khan",
     role: "Technical Executive",
     photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1788623063/1759510887553_lkyb4a.jpg",
     bio: "",
@@ -218,6 +218,21 @@ export const currentTeam: TeamMember[] = [
     github: "",
     email: "vdshinde765@gmail.com",
     website: "",
+    isPlaceholder: false,
+    year: "2026",
+    tenure: "2026–27"
+  },
+  {
+    id: "Spoorthi-sheety",
+    name: "Spoorthi Sheety",
+    role: "Executive - Event Management",
+    photo: "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789667369/WhatsApp_Image_2026-09-16_at_3.58.34_PM_kkacav.jpg",
+    bio: "",
+    linkedin: "",
+    instagram: "",
+    github: "",
+    email: "",
+    website: null,
     isPlaceholder: false,
     year: "2026",
     tenure: "2026–27"

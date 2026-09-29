@@ -356,6 +356,7 @@
 .galleryScrollContainer {
 	display: flex;
 	flex-direction: row;
+	align-items: flex-start;
 	gap: 4vw;
 	width: fit-content;
 	padding: 0 10vw;
@@ -369,22 +370,21 @@
 
 .galleryImageContainer {
 	flex: 0 0 auto;
-	width: 45vw;
-	aspect-ratio: 16/10;
+	height: 55vh;
 	overflow: hidden;
 	background: $bg-card;
 	border: 1px solid $border-white;
 
 	@include media("<=mobile") {
-		width: 75vw;
+		height: 50vh;
 	}
 }
 
 .galleryImage {
-	width: 100%;
+	width: auto;
 	height: 100%;
-	object-fit: cover;
-	transform: scale(1.25);
+	display: block;
+	transform: scale(1);
 	clip-path: inset(100% 0% 0% 0%);
 }
 

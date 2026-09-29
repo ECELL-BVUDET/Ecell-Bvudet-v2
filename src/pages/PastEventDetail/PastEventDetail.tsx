@@ -5,7 +5,7 @@ import S from "./PastEventDetail.module.scss";
 import { useParams, Link } from "react-router-dom";
 import { PageProps } from "../page.types";
 import Nav from "../../components/Nav/Nav";
-import { pastEvents } from "../../data/pastEvents";
+import { pastEventsChronological } from "../../data/pastEvents";
 import LocomotiveScroll from "locomotive-scroll";
 import Button from "../../components/Button/Button";
 import IntroAnimation from "../../animations/intro";
@@ -103,12 +103,12 @@ const PastEventDetail: React.FC<PageProps> = ({
 	const [scroll, setScroll] = useState<any>();
 	const pinWrapperRef = useRef<HTMLDivElement>(null);
 
-	const currentEventIndex = pastEvents.findIndex((e) => e.slug === renderedSlug);
-	const event = pastEvents[currentEventIndex];
+	const currentEventIndex = pastEventsChronological.findIndex((e) => e.slug === renderedSlug);
+	const event = pastEventsChronological[currentEventIndex];
 
 	// Find chronological previous/next events
-	const prevEvent = currentEventIndex > 0 ? pastEvents[currentEventIndex - 1] : null;
-	const nextEvent = currentEventIndex < pastEvents.length - 1 ? pastEvents[currentEventIndex + 1] : null;
+	const prevEvent = currentEventIndex > 0 ? pastEventsChronological[currentEventIndex - 1] : null;
+	const nextEvent = currentEventIndex < pastEventsChronological.length - 1 ? pastEventsChronological[currentEventIndex + 1] : null;
 
 	useEffect(() => {
 		if (preloaded && !scroll) {

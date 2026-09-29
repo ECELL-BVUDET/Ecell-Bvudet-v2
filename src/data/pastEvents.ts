@@ -25,6 +25,44 @@ export interface PastEvent {
 }
 
 export const pastEvents: PastEvent[] = [
+
+  {
+    slug: "launchpad-2026",
+    name: "LAUNCHPAD 2026",
+    shortName: "Launchpad-26",
+    type: "Innovation Showcase",
+    tag: "INNOVATION SHOWCASE",
+    date: "2026",
+    location: "BVUDET, Navi Mumbai",
+    format: "Offline",
+    participantCount: "100+",
+    duration: "1 Day",
+    edition: "Season 2",
+    description: "Launchpad 2026 marks E-Cell BVUDET's inaugural flagship innovation event, bringing together the ecosystem's most promising ideas, ventures, and founders under one platform. The event will spotlight our flagship startups alongside emerging startups, giving students a first-hand look at the journeys, ideas, and innovations shaping the next generation of entrepreneurship.",
+    objective: "To launch 2026 with a defining celebration of entrepreneurship and innovation on campus. Launchpad aims to connect students with established and emerging startups, showcase real entrepreneurial journeys, and inspire the next wave of founders to turn their ideas into impactful ventures.",
+    highlights: [
+      "E-Cell BVUDET's 2026 Inaugural event",
+      "100+ participants in the inaugural edition",
+      "Problem-first format focused on real-world challenges",
+      "Set the template for all future startups"
+    ],
+    guests: [
+    ],
+    images: [
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189920/WhatsApp_Image_2026-09-20_at_1.44.59_PM_lzosox.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189872/Launchpad_2026_sjes3o.png",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189411/20260921_140939.jpg_uvltin.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189411/IMG_1359_vk5ww9.heic",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189406/20260921_143456.jpg_wuxz87.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189407/IMG_7675.JPG_bbc7kx.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/video/upload/v1790189406/IMG_1214_h3af0u.mov",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189417/20260921_135755.jpg_aydcdg.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189418/20260921_134819.jpg_prqrin.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189427/20260921_134455.jpg_etoq8x.jpg",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189425/IMG_7645_p5qanc.heic",
+    "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790189434/IMG_7650_cfjpbo.heic",
+    ]
+  },
   {
     slug: "0-to-1-sprint",
     name: "0 TO 1 SPRINT",
@@ -100,6 +138,47 @@ export const pastEvents: PastEvent[] = [
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1782040854/IMG_20260116_155311450_AE_fouv64.jpg",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1782040858/IMG_20260116_155437468_AE_f5ilax.jpg",
       "https://res.cloudinary.com/dobmi3ojr/image/upload/v1782041212/IMG_3326_loq4ug.jpg"
+    ]
+  },
+  {
+    slug: "ideathonx-2026",
+    name: "IDEATHONX 2026",
+    shortName: "IdeathonX 2026",
+    type: "Innovation Challenge",
+    tag: "IDEATHON",
+    date: "2026",
+    location: "BVUDET, Navi Mumbai",
+    format: "Hybrid",
+    participantCount: "100+",
+    duration: "2 Weeks",
+    edition: "Season 1",
+    description: "IdeathonX 2026 is an innovation challenge by the Entrepreneurship Cell of Bharati Vidyapeeth Deemed University Department of Engineering and Technology. Inspired by the spirit of PitchX 2026, the event gives students a platform to identify meaningful problems, develop innovative solutions, and transform their ideas into impactful ventures. Participants will receive valuable feedback, connect with mentors, and showcase their concepts to industry experts.",
+    objective: "To encourage students to think creatively, solve real-world problems, and turn promising ideas into viable solutions through structured ideation, mentorship, and final presentations.",
+    highlights: [
+      "Hybrid innovation challenge open to students across disciplines",
+      "Multiple stages including idea submission, mentorship, and final presentation",
+      "Top teams receive feedback and guidance from industry experts",
+      "Finalists showcase their solutions at BVUDET, Navi Mumbai"
+    ],
+    guests: [
+      { name: "Aravind Krishna", role: "Judge", organization: "G.E.T Solutions", placeholder: false },
+      { name: "Shubham Dumbre", role: "Mentor", organization: "TedX Speaker", placeholder: false },
+      { name: "Somanath Diksangi", role: "Mentor", organization: "", placeholder: false },
+      { name: "Kanhayya Gupta", role: "Mentor", organization: "Rahi Works", placeholder: false },
+      { name: "ABHIJAY SINGH", role: "Mentor", organization: "Drone Veda Technologies", placeholder: false },
+    ],
+    images: [
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790192580/WhatsApp_Image_2026-09-24_at_1.12.24_AM_atzzsp.jpg",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789665827/Copy_of_INNOVATEX_cf8jmd.png",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789665723/WhatsApp_Image_2026-09-17_at_12.10.33_PM_sqnksx.jpg",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789665723/WhatsApp_Image_2026-09-17_at_12.10.34_PM_1_srmquu.jpg",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789665723/WhatsApp_Image_2026-09-17_at_12.10.34_PM_t4jut4.jpg",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789665724/IMG_6403.JPG_nqxrdc.jpg",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1789665813/IMG_6396.HEIC_agzxnh.jpg",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790331756/Project_-_Sep_25_03_51_PM_-_1_mqhvp9.png",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790331822/Project_-_Sep_25_03_51_PM_-_3_yq1wn9.png",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790331831/Project_-_Sep_25_03_51_PM_-_2_exe7lu.png",
+      "https://res.cloudinary.com/dobmi3ojr/image/upload/v1790331850/Project_-_Sep_25_03_51_PM_-_1_1_sqrpuu.png",
     ]
   },
   {
@@ -201,3 +280,11 @@ export const pastEvents: PastEvent[] = [
     ]
   },
 ];
+
+export const pastEventsChronological = [...pastEvents].sort(
+  (a, b) => {
+    if (a.slug === "ideathonx-2026") return -1;
+    if (b.slug === "ideathonx-2026") return 1;
+    return Number(b.date) - Number(a.date);
+  }
+);
